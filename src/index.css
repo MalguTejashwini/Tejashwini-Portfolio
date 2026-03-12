@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-charcoal text-cream-warm font-body;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer utilities {
+  .glassmorphism {
+    @apply bg-charcoalLight/30 backdrop-blur-xl border border-nude-dark/20 shadow-[0_8px_32px_rgba(0,0,0,0.3)];
+  }
+
+  .glass-card {
+    @apply bg-charcoalLight/50 backdrop-blur-lg border border-nude/10 shadow-2xl rounded-2xl;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  
+  .glowing-divider {
+    @apply w-full h-[1px] bg-gradient-to-r from-transparent via-gold/20 to-transparent shadow-[0_0_15px_rgba(212,175,55,0.3)];
+  }
+}
+
+/* Background blob effects */
+.bg-blobs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #1a1a1a 0%, #121212 100%);
+}
