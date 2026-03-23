@@ -19,7 +19,7 @@ const Projects = () => {
             ],
             techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
             github: "https://github.com/MalguTejashwini",
-            demo: "#"
+            demo: "https://agrisecure-pxmw.vercel.app/"
         },
         {
             title: "QuickCart",
