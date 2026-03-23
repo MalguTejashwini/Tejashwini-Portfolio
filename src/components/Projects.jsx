@@ -75,7 +75,7 @@ const Projects = () => {
             techStack: ["AI Concepts", "REST APIs", "HTML/CSS", "JavaScript"],
             github: "https://github.com/MalguTejashwini",
             demo: "#",
-            image: "/book recommendatin.png"
+            image: "/book-recommendation.png"
         }
     ];
 
@@ -103,10 +103,9 @@ const Projects = () => {
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.7, delay: idx * 0.2, ease: "easeOut" }}
                         >
-                            {/* Background Image */}
                             <div 
                                 className="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                                style={{ backgroundImage: `url(${project.image})` }}
+                                style={{ backgroundImage: `url("${project.image}")` }}
                             ></div>
                             
                             {/* Gradient Overlay for Text Readability */}
