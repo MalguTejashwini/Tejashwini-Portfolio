@@ -68,15 +68,18 @@ const Certifications = () => {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.5, delay: idx * 0.1 }}
                                 >
-                                    {/* Background Image and Overlay */}
+                                    {/* Background Image */}
                                     <div 
-                                        className="absolute inset-0 z-0 opacity-40 group-hover:opacity-60 transition-opacity duration-500 bg-cover bg-center"
+                                        className="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                                         style={{ backgroundImage: `url(${cert.image})` }}
                                     ></div>
-                                    <div className="absolute inset-0 bg-charcoal/80 group-hover:bg-charcoal/70 z-0 transition-all duration-500"></div>
-
-                                    {/* Subtle hover glow inside card */}
-                                    <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl z-0"></div>
+                                    
+                                    {/* Gradient Overlay for Text Readability */}
+                                    <div className="absolute inset-0 bg-gradient-to-b from-charcoal/90 via-charcoal/50 to-charcoal/90 z-0 transition-all duration-500 group-hover:from-charcoal/80 group-hover:to-charcoal/80"></div>
+                                    
+                                    {/* Glassmorphism Border & Subtle Glow */}
+                                    <div className="absolute inset-0 rounded-2xl border border-nude/10 group-hover:border-gold/30 z-0 transition-colors duration-500 shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl z-0 pointer-events-none"></div>
 
                                     <div className="mb-6 relative z-10">
                                         <h3 className="font-display font-semibold text-cream text-lg group-hover:text-gold transition-colors">{cert.title}</h3>
