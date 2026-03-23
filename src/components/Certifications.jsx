@@ -7,22 +7,26 @@ const Certifications = () => {
         {
             title: "ChatGPT-4 Prompt Engineering",
             issuer: "Infosys Springboard",
-            link: "https://drive.google.com/file/d/1HhFeE3ihgnFV1Ki3iyeY1Dkn0dBLnVvM/view?ths=true"
+            link: "https://drive.google.com/file/d/1HhFeE3ihgnFV1Ki3iyeY1Dkn0dBLnVvM/view?ths=true",
+            image: "/infosys.png"
         },
         {
             title: "Java Programming Certification",
             issuer: "CipherSchools",
-            link: "https://www.cipherschools.com/certificate/preview?id=687f7a5d7efd6d5090704938"
+            link: "https://www.cipherschools.com/certificate/preview?id=687f7a5d7efd6d5090704938",
+            image: "/java.png"
         },
         {
             title: "Cloud Computing",
             issuer: "NPTEL",
-            link: "https://drive.google.com/file/d/11F7OscH6bt3tsYEv8bbNkxgQFYhTZUr2/view?ths=true"
+            link: "https://drive.google.com/file/d/11F7OscH6bt3tsYEv8bbNkxgQFYhTZUr2/view?ths=true",
+            image: "/nptel.png"
         },
         {
             title: "Responsive Web Design",
             issuer: "FreeCodeCamp",
-            link: "https://www.freecodecamp.org/certification/fcc726b5b76-1672-4b54-bc22-531dadb3000c/responsive-web-design"
+            link: "https://www.freecodecamp.org/certification/fcc726b5b76-1672-4b54-bc22-531dadb3000c/responsive-web-design",
+            image: "/fcc.png"
         }
     ];
 
@@ -58,14 +62,21 @@ const Certifications = () => {
                             {certs.map((cert, idx) => (
                                 <motion.div 
                                     key={idx} 
-                                    className="glassmorphism rounded-2xl p-6 flex flex-col justify-between group hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(212,175,55,0.15)] transition-all duration-500 border border-nude/10 hover:border-gold/30 h-full relative overflow-hidden"
+                                    className="rounded-2xl p-6 flex flex-col justify-between group hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(212,175,55,0.15)] transition-all duration-500 border border-nude/10 hover:border-gold/30 h-full relative overflow-hidden"
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.5, delay: idx * 0.1 }}
                                 >
+                                    {/* Background Image and Overlay */}
+                                    <div 
+                                        className="absolute inset-0 z-0 opacity-40 group-hover:opacity-60 transition-opacity duration-500 bg-cover bg-center"
+                                        style={{ backgroundImage: `url(${cert.image})` }}
+                                    ></div>
+                                    <div className="absolute inset-0 bg-charcoal/80 group-hover:bg-charcoal/70 z-0 transition-all duration-500"></div>
+
                                     {/* Subtle hover glow inside card */}
-                                    <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl z-0"></div>
 
                                     <div className="mb-6 relative z-10">
                                         <h3 className="font-display font-semibold text-cream text-lg group-hover:text-gold transition-colors">{cert.title}</h3>
