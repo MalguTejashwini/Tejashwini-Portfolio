@@ -5,6 +5,24 @@ import { motion } from 'framer-motion';
 const Projects = () => {
     const projects = [
         {
+            title: "Hushh Wallet",
+            subtitle: "Digital Wallet & Preferences",
+            duration: "Oct 2025 – Nov 2025",
+            description: "Created a Preference app for 200+ users to save choices across major lifestyle categories. Introduced QR-based sharing for instant in-store access and reduced lookup time by 90%. Crafted 30+ wireframes and high-fidelity prototypes supported by a unified design system. Recorded strong Lighthouse results with Performance 95, Accessibility 100, Best Practices 100, SEO 80.",
+            contributions: [
+                "Introduced QR-based sharing reducing lookup by 90%.",
+                "Crafted 30+ wireframes and unified design system."
+            ],
+            metrics: [
+                { label: "Performance", value: "95", icon: <Zap className="w-4 h-4 text-gold" /> },
+                { label: "Accessibility", value: "100", icon: <CheckCircle className="w-4 h-4 text-gold" /> },
+                { label: "SEO", value: "80", icon: <Search className="w-4 h-4 text-gold" /> }
+            ],
+            techStack: ["PHP", "JavaScript", "JSON", "Tailwind CSS", "REST APIs", "Authentication", "Web Platform"],
+            github: "https://github.com/MalguTejashwini",
+            demo: "https://www.figma.com/proto/h6DeoV4RYy5d25XNMk2tzp/HUSHH-WALLET?node-id=1-2&t=0FNatreOPiKtCYfE-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2"
+        },
+        {
             title: "AgriSecure",
             subtitle: "Smart Agriculture Platform",
             duration: "Nov 2025 – Dec 2025",
@@ -124,14 +142,10 @@ const Projects = () => {
                                         <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-2.5 text-sm font-medium text-beige bg-charcoalLight/50 hover:bg-gold/10 hover:text-gold border border-nude/10 hover:border-gold/30 rounded-xl transition-all duration-300 group/github hover:-translate-y-0.5">
                                             <Github className="w-4 h-4 transform group-hover/github:scale-110 transition-transform" /> GitHub
                                         </a>
-                                        {project.demo && project.demo !== "#" ? (
+                                        {project.demo && project.demo !== "#" && (
                                             <a href={project.demo} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-2.5 text-sm font-medium text-charcoal bg-beige hover:bg-gold border border-transparent rounded-xl transition-all duration-300 shadow-[0_4px_10px_rgba(212,188,164,0.2)] hover:shadow-[0_6px_15px_rgba(212,188,164,0.4)] hover:-translate-y-0.5 group/demo">
                                                 <ExternalLink className="w-4 h-4 transform group-hover/demo:translate-x-0.5 transition-transform" /> Live Demo
                                             </a>
-                                        ) : (
-                                            <span className="flex-1 flex items-center justify-center gap-2 py-2.5 text-sm font-medium text-nude-dark/70 bg-charcoalLight/30 border border-nude/5 rounded-xl cursor-not-allowed items-center">
-                                                Demo Coming Soon
-                                            </span>
                                         )}
                                     </div>
                                 </div>
