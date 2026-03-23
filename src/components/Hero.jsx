@@ -80,10 +80,6 @@ const Hero = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
                     >
-                        <a href="#projects" className="group inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-full text-charcoal bg-beige hover:bg-cream transition-all duration-300 shadow-[0_0_20px_rgba(212,188,164,0.3)] hover:shadow-[0_0_40px_rgba(212,188,164,0.6)] transform hover:-translate-y-1 w-full sm:w-auto">
-                            Experience
-                            <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
-                        </a>
                         <div className="flex gap-4 w-full sm:w-auto justify-center">
                             <a href="https://github.com/MalguTejashwini" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center p-4 rounded-full text-cream border border-nude/30 hover:border-nude hover:bg-nude/10 transition-all duration-300 backdrop-blur-sm shadow-[0_0_15px_rgba(212,188,164,0.1)] hover:shadow-[0_0_30px_rgba(212,188,164,0.3)] transform hover:-translate-y-1">
                                 <Github className="h-6 w-6" />
