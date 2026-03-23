@@ -8,7 +8,7 @@ const Projects = () => {
             title: "Hushh Wallet",
             subtitle: "Digital Wallet & Preferences",
             duration: "Oct 2025 – Nov 2025",
-            description: "Created a Preference app for 200+ users to save choices across major lifestyle categories. Introduced QR-based sharing for instant in-store access and reduced lookup time by 90%. Crafted 30+ wireframes and high-fidelity prototypes supported by a unified design system. Recorded strong Lighthouse results with Performance 95, Accessibility 100, Best Practices 100, SEO 80.",
+            description: "Built a Preference App that helps users manage lifestyle choices, featuring QR-based sharing for quick in-store access. Designed multiple wireframes and high-fidelity prototypes using a consistent design system, ensuring a smooth and accessible user experience.",
             contributions: [
                 "Introduced QR-based sharing reducing lookup by 90%.",
                 "Crafted 30+ wireframes and unified design system."

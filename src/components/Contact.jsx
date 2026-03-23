@@ -1,8 +1,15 @@
-import React from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Contact = () => {
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setIsSubmitted(true);
+        setTimeout(() => setIsSubmitted(false), 4000);
+    };
     return (
         <section id="contact" className="py-24 relative w-full overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -79,20 +86,33 @@ const Contact = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                     >
-                        <form className="space-y-6">
+                        <form className="space-y-6" onSubmit={handleSubmit}>
+                            <AnimatePresence>
+                                {isSubmitted && (
+                                    <motion.div 
+                                        initial={{ opacity: 0, y: -10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: -10 }}
+                                        className="bg-green-500/10 border border-green-500/20 text-green-400 px-4 py-3 rounded-xl flex items-center justify-center gap-2 font-medium"
+                                    >
+                                        <CheckCircle className="w-5 h-5" />
+                                        Message sent successfully!
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium text-beige/80 mb-2">Your Name</label>
-                                <input type="text" id="name" className="w-full bg-charcoalLight/50 border border-nude/20 rounded-xl px-4 py-3 text-cream focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-colors" placeholder="John Doe" />
+                                <input type="text" id="name" required className="w-full bg-charcoalLight/50 border border-nude/20 rounded-xl px-4 py-3 text-cream focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-colors" />
                             </div>
                             <div>
                                 <label htmlFor="email" className="block text-sm font-medium text-beige/80 mb-2">Your Email</label>
-                                <input type="email" id="email" className="w-full bg-charcoalLight/50 border border-nude/20 rounded-xl px-4 py-3 text-cream focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-colors" placeholder="john@example.com" />
+                                <input type="email" id="email" required className="w-full bg-charcoalLight/50 border border-nude/20 rounded-xl px-4 py-3 text-cream focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-colors" />
                             </div>
                             <div>
                                 <label htmlFor="message" className="block text-sm font-medium text-beige/80 mb-2">Your Message</label>
-                                <textarea id="message" rows="4" className="w-full bg-charcoalLight/50 border border-nude/20 rounded-xl px-4 py-3 text-cream focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-colors resize-none" placeholder="Hello..."></textarea>
+                                <textarea id="message" rows="4" required className="w-full bg-charcoalLight/50 border border-nude/20 rounded-xl px-4 py-3 text-cream focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-colors resize-none"></textarea>
                             </div>
-                            <button type="button" className="w-full inline-flex items-center justify-center px-8 py-4 px-6 text-base font-medium rounded-xl text-charcoal bg-beige hover:bg-cream transition-all duration-300 shadow-[0_0_20px_rgba(212,188,164,0.3)] hover:shadow-[0_0_40px_rgba(212,188,164,0.6)] transform hover:-translate-y-1 group">
+                            <button type="submit" className="w-full inline-flex items-center justify-center px-8 py-4 px-6 text-base font-medium rounded-xl text-charcoal bg-beige hover:bg-cream transition-all duration-300 shadow-[0_0_20px_rgba(212,188,164,0.3)] hover:shadow-[0_0_40px_rgba(212,188,164,0.6)] transform hover:-translate-y-1 group">
                                 Send Message
                                 <Send className="ml-2 h-5 w-5 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                             </button>
