@@ -20,7 +20,8 @@ const Projects = () => {
             ],
             techStack: ["PHP", "JavaScript", "JSON", "Tailwind CSS", "REST APIs", "Authentication", "Web Platform"],
             github: "https://github.com/MalguTejashwini",
-            demo: "https://www.figma.com/proto/h6DeoV4RYy5d25XNMk2tzp/HUSHH-WALLET?node-id=1-2&t=0FNatreOPiKtCYfE-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2"
+            demo: "https://www.figma.com/proto/h6DeoV4RYy5d25XNMk2tzp/HUSHH-WALLET?node-id=1-2&t=0FNatreOPiKtCYfE-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2",
+            image: "/wallet.png"
         },
         {
             title: "AgriSecure",
@@ -37,7 +38,8 @@ const Projects = () => {
             ],
             techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
             github: "https://github.com/MalguTejashwini",
-            demo: "https://agrisecure-pxmw.vercel.app/"
+            demo: "https://agrisecure-pxmw.vercel.app/",
+            image: "/agrisecure.png"
         },
         {
             title: "QuickCart",
@@ -54,7 +56,8 @@ const Projects = () => {
             ],
             techStack: ["PHP", "JavaScript", "JSON", "Tailwind CSS"],
             github: "https://github.com/MalguTejashwini",
-            demo: "#"
+            demo: "#",
+            image: "/quickcart.png"
         },
         {
             title: "AI Chatbot",
@@ -71,7 +74,8 @@ const Projects = () => {
             ],
             techStack: ["AI Concepts", "REST APIs", "HTML/CSS", "JavaScript"],
             github: "https://github.com/MalguTejashwini",
-            demo: "#"
+            demo: "#",
+            image: "/Bookrecommendations.png"
         }
     ];
 
@@ -93,13 +97,26 @@ const Projects = () => {
                     {projects.map((project, idx) => (
                         <motion.div
                             key={idx}
-                            className="glassmorphism rounded-2xl flex flex-col overflow-hidden group hover:-translate-y-4 hover:shadow-[0_20px_40px_rgba(212,175,55,0.15)] focus-within:-translate-y-4 focus-within:shadow-[0_20px_40px_rgba(212,175,55,0.15)] transition-all duration-500 border border-nude/10 hover:border-gold/30"
+                            className="rounded-2xl flex flex-col overflow-hidden group hover:-translate-y-4 hover:shadow-[0_20px_40px_rgba(212,175,55,0.15)] focus-within:-translate-y-4 focus-within:shadow-[0_20px_40px_rgba(212,175,55,0.15)] transition-all duration-500 border border-nude/10 hover:border-gold/30 relative"
                             initial={{ opacity: 0, y: 60 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.7, delay: idx * 0.2, ease: "easeOut" }}
                         >
-                            <div className="p-8 flex-grow flex flex-col relative">
+                            {/* Background Image */}
+                            <div 
+                                className="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                                style={{ backgroundImage: `url(${project.image})` }}
+                            ></div>
+                            
+                            {/* Gradient Overlay for Text Readability */}
+                            <div className="absolute inset-0 bg-gradient-to-b from-charcoal/90 via-charcoal/60 to-charcoal/90 z-0 transition-all duration-500 group-hover:from-charcoal/80 group-hover:to-charcoal/80"></div>
+                            
+                            {/* Glassmorphism Border & Subtle Glow */}
+                            <div className="absolute inset-0 rounded-2xl border border-nude/10 group-hover:border-gold/30 z-0 transition-colors duration-500 shadow-[inset_0_0_20px_rgba(0,0,0,0.5)] pointer-events-none"></div>
+                            <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl z-0 pointer-events-none"></div>
+
+                            <div className="p-8 flex-grow flex flex-col relative z-10">
                                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brown-soft via-nude to-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                 
                                 <div className="flex justify-between items-start mb-6">
