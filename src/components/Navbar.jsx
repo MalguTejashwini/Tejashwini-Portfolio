@@ -56,7 +56,7 @@ const Navbar = () => {
                     
                     <div className="hidden md:flex items-center space-x-4">
                         <motion.a
-                            href="/Resume.pdf"
+                            href="/Tejashwini's_FullStack_Developer_CV.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="px-6 py-2.5 rounded-full border border-gold/40 text-gold hover:bg-gold hover:text-charcoal transition-all duration-300 text-sm font-bold shadow-[0_0_10px_rgba(212,175,55,0.1)] hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:-translate-y-0.5"
@@ -115,7 +115,7 @@ const Navbar = () => {
                                 </a>
                             ))}
                             <a
-                                href="/Resume.pdf"
+                                href="/Tejashwini's_FullStack_Developer_CV.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="block mt-6 px-4 py-4 rounded-xl text-center bg-gold/15 text-gold border border-gold/30 font-bold hover:bg-gold hover:text-charcoal transition-colors shadow-inner"
