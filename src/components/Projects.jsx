@@ -75,7 +75,7 @@ const Projects = () => {
             techStack: ["AI Concepts", "REST APIs", "HTML/CSS", "JavaScript"],
             github: "https://github.com/MalguTejashwini",
             demo: "#",
-            image: "/book-recommendation.png"
+            image: "/book recommendatin.png"
         }
     ];
 
