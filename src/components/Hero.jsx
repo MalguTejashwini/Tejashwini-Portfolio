@@ -27,7 +27,7 @@ const Hero = () => {
                         whileHover={{ scale: 1.05, boxShadow: "0 0 60px rgba(212,175,55,0.3)" }}
                     >
                         <img
-                            src="/profile.jpeg"
+                            src="/profile.png"
                             alt="Malgu Tejashwini"
                             className="w-full h-full object-cover rounded-full border-4 border-nude/20"
                         />
