@@ -80,38 +80,22 @@ const Hero = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
                     >
-                        <div className="flex gap-4 w-full sm:w-auto justify-center">
+                        <div className="flex flex-wrap gap-4 w-full sm:w-auto justify-center lg:justify-start">
                             <a href="https://github.com/MalguTejashwini" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center p-4 rounded-full text-cream border border-nude/30 hover:border-nude hover:bg-nude/10 transition-all duration-300 backdrop-blur-sm shadow-[0_0_15px_rgba(212,188,164,0.1)] hover:shadow-[0_0_30px_rgba(212,188,164,0.3)] transform hover:-translate-y-1">
                                 <Github className="h-6 w-6" />
                                 <span className="sr-only">GitHub</span>
                             </a>
-                            <a href="mailto:tejashwinimalugu@gmail.com" className="inline-flex items-center justify-center p-4 rounded-full text-cream border border-nude/30 hover:border-nude hover:bg-nude/10 transition-all duration-300 backdrop-blur-sm shadow-[0_0_15px_rgba(212,188,164,0.1)] hover:shadow-[0_0_30px_rgba(212,188,164,0.3)] transform hover:-translate-y-1 lg:hidden">
+                            <a href="mailto:tejashwinimalugu@gmail.com" className="inline-flex items-center justify-center p-4 rounded-full text-cream border border-nude/30 hover:border-nude hover:bg-nude/10 transition-all duration-300 backdrop-blur-sm shadow-[0_0_15px_rgba(212,188,164,0.1)] hover:shadow-[0_0_30px_rgba(212,188,164,0.3)] transform hover:-translate-y-1">
                                 <Mail className="h-6 w-6" />
+                                <span className="sr-only">Email</span>
                             </a>
-                            <a href="https://www.linkedin.com/in/malugu-tejashwini1206" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center p-4 rounded-full text-cream border border-nude/30 hover:border-nude hover:bg-nude/10 transition-all duration-300 backdrop-blur-sm shadow-[0_0_15px_rgba(212,188,164,0.1)] hover:shadow-[0_0_30px_rgba(212,188,164,0.3)] transform hover:-translate-y-1 lg:hidden">
+                            <a href="https://www.linkedin.com/in/malugu-tejashwini1206" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center p-4 rounded-full text-cream border border-nude/30 hover:border-nude hover:bg-nude/10 transition-all duration-300 backdrop-blur-sm shadow-[0_0_15px_rgba(212,188,164,0.1)] hover:shadow-[0_0_30px_rgba(212,188,164,0.3)] transform hover:-translate-y-1">
                                 <Linkedin className="h-6 w-6" />
+                                <span className="sr-only">LinkedIn</span>
                             </a>
-                        </div>
-                    </motion.div>
-
-                    <motion.div
-                        className="mt-16 pt-8 border-t border-nude/20 hidden lg:block"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 1, delay: 0.8 }}
-                    >
-                        <div className="flex flex-wrap justify-start gap-8 text-beige text-sm sm:text-base">
-                            <a href="mailto:tejashwinimalugu@gmail.com" className="flex items-center hover:text-gold transition-colors group">
-                                <Mail className="h-5 w-5 mr-3 text-nude-dark group-hover:text-gold transition-colors" />
-                                tejashwinimalugu@gmail.com
-                            </a>
-                            <a href="tel:+917794948111" className="flex items-center hover:text-gold transition-colors group">
-                                <Phone className="h-5 w-5 mr-3 text-nude-dark group-hover:text-gold transition-colors" />
-                                +91-7794948111
-                            </a>
-                            <a href="https://www.linkedin.com/in/malugu-tejashwini1206" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-gold transition-colors group">
-                                <Linkedin className="h-5 w-5 mr-3 text-nude-dark group-hover:text-gold transition-colors" />
-                                LinkedIn
+                            <a href="tel:+917794948111" className="inline-flex items-center justify-center p-4 rounded-full text-cream border border-nude/30 hover:border-nude hover:bg-nude/10 transition-all duration-300 backdrop-blur-sm shadow-[0_0_15px_rgba(212,188,164,0.1)] hover:shadow-[0_0_30px_rgba(212,188,164,0.3)] transform hover:-translate-y-1">
+                                <Phone className="h-6 w-6" />
+                                <span className="sr-only">Phone</span>
                             </a>
                         </div>
                     </motion.div>
